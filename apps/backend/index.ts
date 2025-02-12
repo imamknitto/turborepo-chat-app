@@ -56,7 +56,7 @@ io.on('connection', socket => {
     const recentMessages = timestamps.filter((time: number) => now - time < TIME_WINDOW)
 
     if (recentMessages.length >= MESSAGE_LIMIT) {
-      socket.emit('spamError', 'Oi caper, Jangan spam biar asik!!')
+      socket.emit('spamError', 'Jangan spam biar asik!!')
       return
     }
 
